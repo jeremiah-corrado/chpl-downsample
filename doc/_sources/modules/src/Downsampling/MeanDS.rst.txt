@@ -1,0 +1,38 @@
+.. default-domain:: chpl
+
+.. module:: MeanDS
+   :synopsis: support for mean-downsampling of arrays 
+
+MeanDS
+======
+**Usage**
+
+.. code-block:: chapel
+
+   use Downsampling.MeanDS;
+
+
+or
+
+.. code-block:: chapel
+
+   import Downsampling.MeanDS;
+
+support for mean-downsampling of arrays 
+
+.. function:: proc meanDownsample(const ref a: [?d] ?t, shape: domain(?)): [shape] t throws where d.rank == shape.rank
+
+   
+   Downsample an array by taking the mean of groups of
+   elements and storing the results in a smaller array.
+   
+   :arg a: the array to downsample. It's element type must support addition
+           and division by an integer.
+   :arg shape: the shape of the downsampled array. It must be the same rank
+               as ``a`` and each of its dimensions must be smaller than the
+               corresponding dimension of ``a``.
+   
+   :returns: an array of the provided shape, where each element is the mean
+             of the corresponding group of elements in ``a``
+   
+

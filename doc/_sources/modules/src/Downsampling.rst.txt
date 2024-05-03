@@ -1,0 +1,30 @@
+.. default-domain:: chpl
+
+.. module:: Downsampling
+   :synopsis: Documentation for downsampling 
+
+Downsampling
+============
+**Usage**
+
+.. code-block:: chapel
+
+   use Downsampling;
+
+
+or
+
+.. code-block:: chapel
+
+   import Downsampling;
+
+**Submodules**
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Downsampling/*
+
+Documentation for downsampling 
+
